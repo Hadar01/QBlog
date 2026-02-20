@@ -1,0 +1,43 @@
+[
+  {
+    "id": "crag-study",
+    "title": "CRAG: Corrective Retrieval Augmented Generation",
+    "summary": "A robust framework designed to address the hallucinations in RAG by adding a self-corrective retrieval evaluator.",
+    "content": "Retrieval-Augmented Generation (RAG) is great, but what happens when the retriever fetches garbage? The generator typically hallucinates an answer based on that garbage.\n\n### The Problem\nStandard RAG blindly trusts the retrieved documents. If the relevance is low, the model is misled.\n\n### The CRAG Solution\nCorrective RAG introduces a lightweight \"Retrieval Evaluator\" after the retrieval step. It classifies retrieved documents into three categories:\n1. **Correct:** Use them for generation.\n2. **Ambiguous:** Combine with a web search for more context.\n3. **Incorrect:** Discard and rely entirely on web search fallback.\n\n### My Takeaway\nThis adds a necessary \"critic\" loop to the pipeline.",
+    "tags": [
+      "AI",
+      "RAG",
+      "CRAG",
+      "NLP"
+    ],
+    "createdAt": "2026-02-19T14:08:39.382Z",
+    "readingTime": 4
+  },
+  {
+    "id": "self-improving-rag",
+    "title": "Self-Improving RAG: The Infinite Loop",
+    "summary": "Exploring how RAG systems can generate their own training data to iteratively refine both retrieval and generation.",
+    "content": "The concept of Self-Improving RAG is fascinating.\n\n### How it works\n1. **Generate & Critique:** The system generates an answer and critiques its own output.\n2. **Data Creation:** High-quality generations are added to a training set.\n3. **Fine-tuning:** The retriever and generator are fine-tuned based on results.",
+    "tags": [
+      "AI",
+      "RAG",
+      "Machine Learning"
+    ],
+    "createdAt": "2026-02-18T14:08:39.383Z",
+    "readingTime": 5
+  },
+  {
+    "id": "seed-transformers",
+    "title": "Attention Is All You Need: Understanding Transformers",
+    "summary": "A deep dive into the architecture that revolutionized NLP.",
+    "content": "The Transformer model, introduced in \"Attention Is All You Need\" (2017), marked a turning point in NLP.\n\n### Self-Attention\nSelf-attention allows the model to look at all words simultaneously, enabling parallel training and drastically better long-range dependency handling.",
+    "tags": [
+      "AI",
+      "Deep Learning",
+      "Transformers",
+      "NLP"
+    ],
+    "createdAt": "2026-02-15T14:08:39.383Z",
+    "readingTime": 3
+  }
+]

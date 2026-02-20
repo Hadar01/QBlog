@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindStream</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Merriweather', 'serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+      .kindle body { background-color: #f5ebd6 !important; color: #433422 !important; }
+.kindle .bg-white, .kindle .dark\:bg-zinc-900 { background-color: #eaddcf !important; border-color: #d4c5b0 !important; color: #433422 !important; }
+.kindle .text-gray-600, .kindle .text-gray-500, .kindle .dark\:text-gray-400 { color: #6d5843 !important; }
+.kindle h1, .kindle h2, .kindle h3, .kindle h4, .kindle strong { color: #2b2112 !important; }
+.kindle nav { background-color: rgba(245, 235, 214, 0.9) !important; border-color: #d4c5b0 !important; }
+      body { font-family: 'Inter', sans-serif; }
+      .font-serif { font-family: 'Merriweather', serif; }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+      .dark ::-webkit-scrollbar-thumb { background: #475569; }
+      .prose p { margin-bottom: 1.5em; line-height: 1.8; }
+    </style>
+  </head>
+  <body class="bg-[#FAF9F6] text-[#2D2D2D] dark:bg-zinc-950 dark:text-gray-100 transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
