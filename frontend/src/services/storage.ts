@@ -6,7 +6,7 @@
  * All original exports are preserved for Navbar.tsx, Admin.tsx, Login.tsx, etc.
  */
 
-import { BlogPost, StorageKeys, AdminSettings } from '../types';
+import { BlogPost, StorageKeys, AdminSettings } from '../types/index';
 
 const API_BASE = (import.meta.env.VITE_API_URL ?? '') + '/api';
 
