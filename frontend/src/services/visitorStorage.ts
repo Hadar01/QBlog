@@ -8,7 +8,7 @@
 
 import { Visitor, StorageKeys } from '../types';
 
-const API_BASE = '/api';
+const API_BASE = (import.meta.env.VITE_API_URL ?? '') + '/api';
 
 /**
  * Fetch all visitors from the last 24h (global, server-side).
