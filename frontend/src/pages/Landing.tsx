@@ -129,7 +129,7 @@ export const Landing: React.FC = () => {
         transition={{ delay: 1, duration: 1 }}
         className="mt-20 mb-10 z-10"
       >
-        <a href="mailto:feedback@mindstream.com?subject=MindStream Feedback" className="inline-flex items-center text-sm text-gray-400 hover:text-blue-500 transition-colors">
+        <a href="mailto:aarushpandey820@gmail.com?subject=MindStream Feedback" className="inline-flex items-center text-sm text-gray-400 hover:text-blue-500 transition-colors">
           <MessageSquare className="w-4 h-4 mr-2" />
           Have a suggestion or found a bug? Let me know.
         </a>
