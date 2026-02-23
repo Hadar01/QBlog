@@ -1,64 +1,95 @@
-MindStream (QBlog) | Gen AI & Quantum Research Lab
-This repository contains the source code and technical content for ryuk.live/#/, a minimalist digital garden dedicated to documenting deep-dives into Agentic Workflows, Quantum Optimization, and Transformer Architectures.
+# QBlog
 
-🚀 The Mission
-To move beyond generic documentation by providing architectural syntheses and performance benchmarks for cutting-edge technologies. This blog serves as a "Proof of Work" for my research in:
+A simple blog app with an **admin panel** that lets you create/edit posts from anywhere (as long as you’re logged in as an admin).
 
+## What you can do
 
-Generative AI: Designing multi-agent systems and evaluating RAG faithfulness using RAGAS.
-+2
+- Read posts on the public site
+- Sign in as an admin
+- Create, edit, and delete posts from the admin area
+- Manage content remotely (no redeploy needed for content updates)
 
+## Repository structure
 
-Quantum Computing: Formulating QUBO problems and exploring Post-Quantum Cryptography.
-+2
+- `frontend/` — Client app (UI)
+- `backend/` — Server/API (admin + content management)
 
-🛠 Project Architecture
-The site is built with a focus on clean delivery of technical concepts:
+## Getting started (local development)
 
+> Update the commands below to match your project if you use different scripts/ports.
 
-Frontend: Minimalist UI designed for readability of complex mathematical formulas and code snippets.
-+1
+### Prerequisites
+- Node.js (LTS recommended)
+- npm (or yarn/pnpm)
 
+### 1) Clone
+```bash
+git clone https://github.com/Hadar01/QBlog.git
+cd QBlog
+```
 
-Content Pipeline: Structured around technical syntheses of research papers and implementation logs from my internship at HCLTech.
-+1
+### 2) Install dependencies
+```bash
+cd backend
+npm install
+cd ../frontend
+npm install
+```
 
-📚 Key Content Pillars
-1. Agentic AI & RAG Engineering
+### 3) Configure environment variables
 
-Stateful Workflows: Implementing LangGraph to manage complex, multi-hop query logic.
-+1
+Create `.env` files (or whatever your project uses) for both apps.
 
+**Backend (`backend/.env`)** (example keys — adjust to your actual code):
+- `PORT=...`
+- `DATABASE_URL=...`
+- `JWT_SECRET=...` (or session secret)
+- `ADMIN_EMAIL=...` (if applicable)
+- `ADMIN_PASSWORD=...` (if applicable)
 
-Retrieval Optimization: Benchmarking context-aware chunking and hybrid search strategies.
-+1
+**Frontend (`frontend/.env`)** (example keys — adjust as needed):
+- `VITE_API_URL=...` (or `NEXT_PUBLIC_API_URL=...`, etc.)
 
+### 4) Run the apps
 
-Evaluation: Using RAGAS to quantify and mitigate LLM hallucinations.
-+1
+In one terminal:
+```bash
+cd backend
+npm run dev
+```
 
-2. Quantum & Cryptographic Research
+In another terminal:
+```bash
+cd frontend
+npm run dev
+```
 
-Optimization: Solving complex optimization problems using the D-Wave Ocean SDK.
-+1
+Open the frontend in your browser (usually `http://localhost:5173` or `http://localhost:3000` depending on the framework).
 
+## Admin access
 
-Security: Frameworks for Post-Quantum Cryptography and secure authentication tokens.
-+1
+The admin area is protected. Once you sign in as an admin, you can update blog content from anywhere.
 
+> If you want, add details here about:
+> - the admin route (e.g. `/admin`)
+> - how admins are created (seed user, env vars, DB record, etc.)
+> - roles/permissions (if any)
 
-Error Mitigation: Insights from the Qiskit Global Summer School 2025 on circuit reliability.
-+1
+## Deployment
 
-3. Multimodal Vision
+Typical approach:
+- Deploy `backend/` as an API service
+- Deploy `frontend/` as a static site or web app
+- Point the frontend to the backend API URL via environment variables
 
-Performance Tuning: Optimizing YOLO-based architectures for real-time inference (>90% accuracy) in edge-case environments.
-+1
+## Roadmap ideas (optional)
 
-📈 Technical Impact
+- Post drafts & scheduled publishing
+- Image uploads (S3/Cloudinary)
+- Tags/categories & search
+- Markdown editor for posts
+- Comments (with moderation)
 
-Verification: Every "Study Summary" is backed by code implementations found in my GitHub repositories.
+## License
 
-
-Optimization: Documented methods for improving retrieval relevance by 25% for domain-specific scientific data.
-+1
+Add a license (MIT/Apache-2.0/etc.) or remove this section if not applicable.
