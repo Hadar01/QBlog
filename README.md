@@ -74,6 +74,7 @@ The admin area is protected. Once you sign in as an admin, you can update blog c
 > - the admin route (e.g. `/admin`)
 > - how admins are created (seed user, env vars, DB record, etc.)
 > - roles/permissions (if any)
+> - Going to add n8n hook which will automate the process
 
 ## Deployment
 
